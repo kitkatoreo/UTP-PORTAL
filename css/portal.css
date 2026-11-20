@@ -1,0 +1,160 @@
+/* UTP STUDENT PORTAL */
+/* Main Stylesheet */
+
+/* Global Variables */
+:root {
+    --primary: #102a43;
+    --secondary: #0d9488;
+    --background: #f5f8fc;
+    --white: #ffffff;
+    --text: #243b53;
+}
+
+/* General Styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+}
+
+/* NAVBAR */
+.custom-navbar {
+    background-color: #102a43;
+    padding: 15px 40px;
+    min-height: 75px;
+}
+
+/* LOGO */
+.navbar-brand {
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* NAVIGATION LINKS */
+.navbar-nav .nav-link {
+    color: white;
+    font-size: 16px;
+    margin-left: 20px;
+    transition: color 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.navbar-nav .nav-link:hover {
+    color: #38bdf8;
+}
+
+/* ACTIVE LINK */
+.navbar-nav .nav-link.active {
+    color: white;
+    font-weight: 600;
+}
+
+/* MOBILE RESPONSIVE */
+@media (max-width: 991px) {
+
+    .custom-navbar {
+        padding: 15px 20px;
+    }
+
+    .navbar-nav .nav-link {
+        margin-left: 0;
+    }
+}
+
+/* Homepage Section */
+.homepage-section {
+    padding: 110px 0;
+    background: linear-gradient(
+        135deg,
+        #e8f5f6,
+        #f5f8fc
+    );
+}
+
+.homepage-section h1 {
+    color: var(--primary);
+}
+
+.welcome-label {
+    color: var(--secondary);
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.homepage-description {
+    font-size: 17px;
+    max-width: 600px;
+    line-height: 1.8;
+}
+
+/* Main Button */
+.btn-primary {
+    background-color: var(--secondary);
+    border-color: var(--secondary);
+    padding: 12px 25px;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background-color: #0b766e;
+    border-color: #0b766e;
+}
+
+/* Features Section */
+.features-section {
+    padding: 80px 0;
+}
+
+.feature-card {
+    background-color: var(--white);
+    padding: 35px;
+    border-radius: 15px;
+    height: 100%;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-8px);
+}
+
+.feature-icon {
+    font-size: 40px;
+    color: var(--secondary);
+    display: block;
+    margin-bottom: 20px;
+}
+
+.feature-card h4 {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--primary);
+    color: white;
+    padding: 35px 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+
+    .homepage-section {
+        padding: 65px 0;
+    }
+
+    .homepage-section h1 {
+        font-size: 34px;
+    }
+
+    .feature-card {
+        padding: 25px;
+    }
+
+    .navbar-nav .nav-link {
+        padding: 10px 0;
+    }
+}

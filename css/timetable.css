@@ -1,0 +1,182 @@
+/* ==========================================
+   UTP STUDENT PORTAL - CLASS TIMETABLE
+========================================== */
+
+/* Day Filter */
+#dayFilter {
+    min-height: 46px;
+    border-color: #e2e8f0;
+    border-radius: 8px;
+}
+
+#dayFilter:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 0 0.2rem rgba(13,148,136,0.15);
+}
+
+/* Weekly Timetable Container */
+.timetable-container {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* Each Day Section */
+.timetable-day {
+    border: 1px solid #e2e8f0;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+/* Day Heading */
+.timetable-day-header {
+    background: #f1f5f9;
+    padding: 15px 20px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 10px;
+}
+
+.timetable-day-header h6 {
+    margin: 0;
+    color: #102a43;
+    font-weight: 700;
+}
+
+.timetable-day-count {
+    color: #64748b;
+    font-size: 12px;
+}
+
+/* Class List */
+.timetable-class-list {
+    padding: 15px;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 15px;
+}
+
+/* Individual Class Card */
+.timetable-class-card {
+    border: 1px solid #e2e8f0;
+    border-left: 4px solid #0d9488;
+    border-radius: 10px;
+
+    padding: 18px;
+    background: #ffffff;
+
+    transition: transform 0.2s ease,
+                box-shadow 0.2s ease;
+}
+
+.timetable-class-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(16,42,67,0.08);
+}
+
+/* Class Top Section */
+.timetable-class-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+/* Course Code */
+.timetable-course-code {
+    background: #ccfbf1;
+    color: #0f766e;
+    border-radius: 6px;
+    padding: 5px 10px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+/* Class Time */
+.timetable-time {
+    color: #475569;
+    font-size: 13px;
+    font-weight: 600;
+}
+
+/* Course Name */
+.timetable-course-name {
+    font-size: 15px;
+    font-weight: 700;
+    color: #102a43;
+    margin-bottom: 14px;
+}
+
+/* Lecturer and Room */
+.timetable-detail {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 9px;
+
+    color: #64748b;
+    font-size: 13px;
+}
+
+.timetable-detail i {
+    color: #0d9488;
+    font-size: 15px;
+}
+
+/* Empty State */
+.timetable-empty {
+    text-align: center;
+    padding: 45px 20px;
+}
+
+.timetable-empty i {
+    display: block;
+    font-size: 40px;
+    color: #94a3b8;
+    margin-bottom: 15px;
+}
+
+.timetable-empty h6 {
+    color: #102a43;
+    font-weight: 700;
+}
+
+.timetable-empty p {
+    color: #64748b;
+}
+
+/* Tablet */
+@media (max-width: 1199.98px) {
+
+    .timetable-class-list {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+
+    .timetable-day-header {
+        padding: 13px 15px;
+    }
+
+    .timetable-class-list {
+        padding: 12px;
+    }
+
+    .timetable-class-card {
+        padding: 15px;
+    }
+
+    .timetable-course-name {
+        font-size: 14px;
+    }
+
+}

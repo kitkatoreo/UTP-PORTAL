@@ -1,0 +1,81 @@
+/* =====================================
+   UTP - ASSIGNMENT TRACKER
+===================================== */
+
+/* Summary cards */
+.summary-card {
+    border: 1px solid #e9edf3;
+    border-radius: 14px;
+    transition: 0.2s;
+}
+
+.summary-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.05);
+}
+
+/* Assignment panel */
+.assignment-panel {
+    border-radius: 14px;
+    border: 1px solid #e9edf3;
+}
+
+/* Search and filters */
+.form-control,
+.form-select {
+    border-radius: 9px;
+    padding: 10px 12px;
+    border-color: #e2e8f0;
+}
+
+.form-control:focus,
+.form-select:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.08);
+}
+
+/* Table */
+.assignment-table th {
+    color: #64748b;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.assignment-table td {
+    padding: 16px 15px;
+    font-size: 14px;
+    vertical-align: middle;
+}
+
+.assignment-table tbody tr:hover {
+    background: #f8fafc;
+}
+
+/* Badges */
+.assignment-table .badge {
+    font-size: 12px;
+    font-weight: 500;
+    padding: 7px 11px;
+}
+
+/* Buttons */
+.btn {
+    border-radius: 9px;
+}
+
+.assignment-table .btn {
+    padding: 6px 10px;
+}
+
+/* Modal */
+.modal-content {
+    border: none;
+    border-radius: 15px;
+}
+
+.modal-header,
+.modal-footer {
+    border-color: #f1f5f9;
+}

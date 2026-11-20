@@ -1,0 +1,579 @@
+/* ==========================================
+   UTP STUDENT PORTAL - DASHBOARD STYLES
+========================================== */
+
+:root {
+    --primary: #102a43;
+    --secondary: #0d9488;
+    --background: #f4f7fb;
+    --white: #ffffff;
+    --text: #243b53;
+    --muted: #64748b;
+    --border: #e2e8f0;
+    --sidebar-width: 255px;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: var(--background);
+    color: var(--text);
+}
+
+/* =====================
+   SIDEBAR
+===================== */
+
+.sidebar {
+    width: var(--sidebar-width);
+    height: 100vh;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background: var(--primary);
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 1050;
+    overflow-y: auto;
+}
+
+.sidebar-brand {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 25px 20px;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.brand-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 12px;
+    background: var(--secondary);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.sidebar-brand small {
+    color: #cbd5e1;
+}
+
+.sidebar-nav {
+    padding: 20px 12px;
+    flex: 1 0 auto;
+}
+
+.menu-label {
+    color: #94a3b8;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 0 14px;
+    margin-bottom: 12px;
+}
+
+.sidebar-link {
+    display: flex;
+    align-items: center;
+    gap: 13px;
+
+    padding: 12px 15px;
+    margin-bottom: 5px;
+
+    color: #cbd5e1;
+    text-decoration: none;
+    border-radius: 9px;
+
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.sidebar-link i {
+    font-size: 18px;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background: var(--secondary);
+    color: white;
+}
+
+.sidebar-link:focus-visible,
+.menu-button:focus-visible {
+    outline: 2px solid #5eead4;
+    outline-offset: 2px;
+}
+
+.logout-link {
+    width: 100%;
+    background: transparent;
+    border: none;
+    font: inherit;
+    text-align: left;
+    cursor: pointer;
+}
+
+.logout-link:hover {
+    background: #dc2626;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    color: #94a3b8;
+}
+
+/* =====================
+   MAIN LAYOUT
+===================== */
+
+.main-wrapper {
+    margin-left: var(--sidebar-width);
+    min-height: 100vh;
+    min-width: 0;
+}
+
+.topbar {
+    min-height: 80px;
+    background: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 35px;
+    border-bottom: 1px solid var(--border);
+}
+
+.topbar-user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.topbar-user > i {
+    font-size: 20px;
+    color: var(--muted);
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+
+    background: var(--secondary);
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-weight: bold;
+}
+
+.dashboard-content {
+    padding: 35px;
+    max-width: 1600px;
+    margin: auto;
+}
+
+/* =====================
+   WELCOME SECTION
+===================== */
+
+.welcome-section {
+    margin-bottom: 30px;
+}
+
+.welcome-section h2 {
+    font-size: 27px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.welcome-section p {
+    color: var(--muted);
+    margin-bottom: 0;
+}
+
+/* =====================
+   SUMMARY CARDS
+===================== */
+
+.summary-card {
+    background: white;
+    border-radius: 15px;
+    padding: 25px;
+    height: 100%;
+
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+
+    transition: transform 0.2s;
+}
+
+.summary-card:hover {
+    transform: translateY(-5px);
+}
+
+.summary-card p {
+    color: var(--muted);
+    margin: 15px 0 5px;
+}
+
+.summary-card h3 {
+    font-size: 30px;
+    font-weight: bold;
+    color: var(--primary);
+}
+
+.summary-card small {
+    color: var(--muted);
+}
+
+.summary-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+}
+
+.teal {
+    background: #ccfbf1;
+    color: #0f766e;
+}
+
+.blue {
+    background: #dbeafe;
+    color: #2563eb;
+}
+
+.purple {
+    background: #ede9fe;
+    color: #7c3aed;
+}
+
+.orange {
+    background: #ffedd5;
+    color: #ea580c;
+}
+
+/* =====================
+   CONTENT CARDS
+===================== */
+
+.content-card {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    height: 100%;
+
+    border: 1px solid var(--border);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.03);
+}
+
+.card-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 10px;
+
+    margin-bottom: 25px;
+}
+
+.card-heading h5 {
+    font-weight: bold;
+    color: var(--primary);
+    margin-bottom: 5px;
+}
+
+.card-heading p {
+    color: var(--muted);
+    font-size: 13px;
+    margin: 0;
+}
+
+.card-heading > i {
+    color: var(--secondary);
+    font-size: 22px;
+}
+
+.card-heading a {
+    color: var(--secondary);
+    font-size: 13px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* =====================
+   GPA CHART
+===================== */
+
+.chart-container {
+    position: relative;
+    width: 100%;
+    height: 280px;
+}
+
+/* =====================
+   ACADEMIC INFORMATION
+===================== */
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+    font-size: 14px;
+}
+
+.info-item span {
+    color: var(--muted);
+}
+
+.info-item strong {
+    text-align: right;
+}
+
+.status-active {
+    color: #059669;
+}
+
+/* =====================
+   ASSIGNMENTS
+===================== */
+
+.assignment-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.assignment-item h6,
+.announcement-item h6 {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.assignment-item small,
+.announcement-item small {
+    color: var(--muted);
+}
+
+.status-badge {
+    font-size: 11px;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 20px;
+    white-space: nowrap;
+}
+
+.status-badge.pending {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.status-badge.in-progress {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.status-badge.completed {
+    background: #d1fae5;
+    color: #047857;
+}
+
+/* =====================
+   ANNOUNCEMENTS
+===================== */
+
+.announcement-item {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+
+    padding: 15px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.announcement-icon {
+    width: 42px;
+    height: 42px;
+    border-radius: 10px;
+
+    background: #ccfbf1;
+    color: var(--secondary);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-shrink: 0;
+}
+
+/* =====================
+   FOOTER
+===================== */
+
+.dashboard-footer {
+    text-align: center;
+    color: var(--muted);
+    font-size: 12px;
+    padding: 35px 0 5px;
+}
+
+/* =====================
+   MOBILE NAVIGATION
+===================== */
+
+/* Hidden on desktop; the sidebar is always visible there */
+.mobile-header,
+.sidebar-backdrop {
+    display: none;
+}
+
+.menu-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    margin: -8px;
+    padding: 0;
+
+    border: 0;
+    border-radius: 8px;
+    background: transparent;
+    color: var(--primary);
+    font-size: 26px;
+    cursor: pointer;
+}
+
+/* Tablets and phones: sidebar becomes an off-canvas drawer */
+@media (max-width: 991.98px) {
+
+    .mobile-header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        position: sticky;
+        top: 0;
+        z-index: 1030;
+
+        padding: 14px 20px;
+        background: white;
+        color: var(--primary);
+        border-bottom: 1px solid var(--border);
+    }
+
+    .sidebar {
+        width: min(280px, 85vw);
+        transform: translateX(-100%);
+        visibility: hidden; /* keeps hidden links out of the tab order */
+        transition: transform 0.3s ease, visibility 0s linear 0.3s;
+        box-shadow: none;
+    }
+
+    .sidebar.show {
+        transform: translateX(0);
+        visibility: visible;
+        transition: transform 0.3s ease, visibility 0s;
+        box-shadow: 0 0 40px rgba(0, 0, 0, 0.35);
+    }
+
+    .sidebar-backdrop {
+        position: fixed;
+        inset: 0;
+        z-index: 1040;
+        background: rgba(0, 0, 0, 0.5);
+    }
+
+    .sidebar-backdrop.show {
+        display: block;
+    }
+
+    /* Stop the page scrolling behind the open drawer */
+    body.sidebar-open {
+        overflow: hidden;
+    }
+
+    .main-wrapper {
+        margin-left: 0;
+        width: 100%;
+    }
+
+    .topbar {
+        min-height: 64px;
+        padding: 10px 20px;
+    }
+
+    .topbar h5 {
+        font-size: 1.05rem;
+    }
+
+    .dashboard-content {
+        padding: 25px 20px;
+    }
+}
+
+/* Small phones */
+@media (max-width: 575.98px) {
+
+    .topbar-user span {
+        display: none;
+    }
+
+    .topbar small {
+        display: none;
+    }
+
+    .dashboard-content {
+        padding: 20px 14px;
+    }
+
+    .welcome-section h2 {
+        font-size: 23px;
+    }
+
+    .content-card,
+    .summary-card {
+        padding: 20px;
+    }
+
+    .info-item {
+        font-size: 12px;
+    }
+}
+
+/* Respect users who turn animations off */
+@media (prefers-reduced-motion: reduce) {
+
+    .sidebar,
+    .summary-card {
+        transition: none;
+    }
+}

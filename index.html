@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="UTP Student Portal - your academic information in one place.">
+
+    <title>UTP Student Portal</title>
+
+    <!-- Bootstrap 5.3.3 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+          rel="stylesheet">
+
+    <!-- Homepage CSS -->
+    <link rel="stylesheet" href="css/portal.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+        <div class="container-fluid">
+
+            <a class="navbar-brand d-flex align-items-center gap-2"
+               href="index.html">
+                <i class="bi bi-mortarboard-fill"></i>
+                UTP Student Portal
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#navbarContent"
+                    aria-controls="navbarContent"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav ms-auto align-items-lg-center">
+
+                    <li class="nav-item">
+                        <a class="nav-link active"
+                           href="index.html"
+                           aria-current="page">Home</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">Features</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Login</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="register.html">Register</a>
+                    </li>
+
+                </ul>
+            </div>
+
+        </div>
+    </nav>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="homepage-section">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-lg-8">
+
+                        <span class="welcome-label">WELCOME TO UTP</span>
+
+                        <h1 class="display-4 fw-bold mt-3">
+                            Your Academic Journey Starts Here.
+                        </h1>
+
+                        <p class="lead mt-3">University Tecnology Petron</p>
+
+                        <p class="homepage-description">
+                            Your all-in-one student portal for managing
+                            academic results, courses, assignments,
+                            attendance and university announcements.
+                        </p>
+
+                        <a href="login.html" class="btn btn-primary btn-lg mt-3">
+                            Access Student Portal
+                            <i class="bi bi-arrow-right"></i>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ANNOUNCEMENTS -->
+        <section class="container">
+            <div class="card border-0 shadow-sm mt-4">
+                <div class="card-body p-4">
+
+                    <h5 class="fw-bold mb-4">
+                        <i class="bi bi-megaphone text-primary me-2"></i>
+                        Latest Announcements
+                    </h5>
+
+                    <div class="list-group list-group-flush">
+
+                        <div class="list-group-item px-0 py-3">
+                            <span class="badge text-bg-primary mb-2">Academic</span>
+                            <h6 class="fw-bold">Course Registration Now Open</h6>
+                            <p class="text-secondary mb-1">
+                                Students are reminded to complete their course registration.
+                            </p>
+                            <small class="text-muted">20 Nov 2026</small>
+                        </div>
+
+                        <div class="list-group-item px-0 py-3">
+                            <span class="badge text-bg-danger mb-2">Important</span>
+                            <h6 class="fw-bold">Final Examination Schedule</h6>
+                            <p class="text-secondary mb-1">
+                                The examination timetable is now available.
+                            </p>
+                            <small class="text-muted">18 Nov 2026</small>
+                        </div>
+
+                        <div class="list-group-item px-0 py-3">
+                            <span class="badge text-bg-success mb-2">Event</span>
+                            <h6 class="fw-bold">Student Activity Day</h6>
+                            <p class="text-secondary mb-1">
+                                Join us for student activities and programmes.
+                            </p>
+                            <small class="text-muted">15 Nov 2026</small>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES -->
+        <section id="features" class="features-section">
+            <div class="container">
+
+                <h2 class="text-center fw-bold">Explore Our Student Portal</h2>
+
+                <p class="text-center text-muted mb-5">
+                    Everything you need in one place.
+                </p>
+
+                <div class="row g-4">
+
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="bi bi-book feature-icon"></i>
+                            <h4>My Courses</h4>
+                            <p>View enrolled courses, lecturers and credit hours.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="bi bi-bar-chart feature-icon"></i>
+                            <h4>Academic Results</h4>
+                            <p>Monitor your grades, GPA and CGPA performance.</p>
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <div class="feature-card">
+                            <i class="bi bi-calendar-week feature-icon"></i>
+                            <h4>Class Timetable</h4>
+                            <p>Manage your weekly class schedule.</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container text-center">
+            <h5>UTP Student Portal</h5>
+            <p>University Tecnology Petron</p>
+            <small>&copy; 2026 UTP Student Portal. IMS566 Individual Project.</small>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>

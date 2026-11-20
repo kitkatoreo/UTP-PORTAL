@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="UTP Student Portal Academic Dashboard">
+
+    <title>My Courses | UTP</title>
+
+    <!-- Check login before displaying dashboard -->
+    <script>
+        if (!sessionStorage.getItem("utpCurrentStudent")) {
+            window.location.replace("login.html");
+        }
+    </script>
+
+    <!-- Bootstrap 5.3.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+      rel="stylesheet">
+
+    <!-- Page CSS -->
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/courses.css">
+</head>
+
+<body>
+
+    <!-- MOBILE TOP BAR -->
+    <header class="mobile-header d-lg-none">
+        <button class="menu-button"
+                id="menuToggle"
+                type="button"
+                aria-label="Open navigation menu"
+                aria-controls="sidebar"
+                aria-expanded="false">
+            <i class="bi bi-list"></i>
+        </button>
+
+        <span class="fw-bold">UTP Student Portal</span>
+
+        <i class="bi bi-mortarboard-fill"></i>
+    </header>
+
+    <!-- MOBILE SIDEBAR BACKDROP -->
+    <div id="sidebarBackdrop" class="sidebar-backdrop"></div>
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+
+        <div class="sidebar-brand">
+            <div class="brand-icon">
+                <i class="bi bi-mortarboard-fill"></i>
+            </div>
+            <div>
+                <h5 class="mb-0 fw-bold">UTP</h5>
+                <small>Student Portal</small>
+            </div>
+        </div>
+
+        <nav class="sidebar-nav" aria-label="Student portal navigation">
+
+            <p class="menu-label">MAIN MENU</p>
+            <a href="dashboard.html" class="sidebar-link">
+                <i class="bi bi-grid-1x2"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="courses.html" class="sidebar-link active" aria-current="page">
+                <i class="bi bi-book"></i>
+                <span>My Courses</span>
+            </a>
+            <a href="results.html" class="sidebar-link">
+                <i class="bi bi-bar-chart"></i>
+                <span>Academic Results</span>
+            </a>
+            <a href="timetable.html" class="sidebar-link">
+                <i class="bi bi-calendar-week"></i>
+                <span>Class Timetable</span>
+            </a>
+
+            <p class="menu-label mt-4">STUDENT SERVICES</p>
+            <a href="assignments.html" class="sidebar-link">
+                <i class="bi bi-clipboard-check"></i>
+                <span>Assignment Tracker</span>
+            </a>
+            <a href="attendance.html" class="sidebar-link">
+                <i class="bi bi-check2-square"></i>
+                <span>Attendance Tracker</span>
+            </a>
+            <a href="calendar.html" class="sidebar-link">
+                <i class="bi bi-calendar-event"></i>
+                <span>Academic Calendar</span>
+            </a>
+
+            <p class="menu-label mt-4">ACCOUNT</p>
+            <a href="profile.html" class="sidebar-link">
+                <i class="bi bi-person-circle"></i>
+                <span>Student Profile</span>
+            </a>
+
+            <button id="logoutBtn"
+                    class="sidebar-link logout-link"
+                    type="button">
+                <i class="bi bi-box-arrow-right"></i>
+                <span>Logout</span>
+            </button>
+
+        </nav>
+
+        <div class="sidebar-footer">
+            <small>&copy; 2026 UTP Student Portal</small>
+        </div>
+
+    </aside>
+
+    <!-- MAIN CONTENT -->
+    <div class="main-wrapper">
+
+        <!-- TOPBAR -->
+        <header class="topbar">
+
+            <div>
+    <h5 class="mb-0 fw-bold">My Courses</h5>
+    <small class="text-muted">
+        Academic Course Management
+    </small>
+</div>
+
+            <div class="topbar-user">
+
+                <i class="bi bi-bell"></i>
+
+                <div class="user-avatar" id="userInitials">
+                    DS
+                </div>
+
+                <span id="topbarStudentName">
+                    Demo Student
+                </span>
+
+            </div>
+
+        </header>
+
+        <!-- DASHBOARD -->
+
+<main class="dashboard-content">
+
+    <!-- PAGE HEADING -->
+    <section class="welcome-section">
+
+        <h2>My Courses</h2>
+
+        <p>
+            View and manage your enrolled courses,
+            lecturers, credit hours and semesters.
+        </p>
+
+    </section>
+
+    <!-- COURSE SUMMARY -->
+    <section class="row g-4 mb-4"
+             aria-label="Course summary">
+
+        <!-- Total Courses -->
+        <div class="col-md-6">
+
+            <div class="summary-card">
+
+                <div class="summary-icon teal">
+                    <i class="bi bi-book"></i>
+                </div>
+
+                <p>Courses Shown</p>
+
+                <h3 id="totalCourses">0</h3>
+
+                <small>
+                    Based on the selected filters
+                </small>
+
+            </div>
+
+        </div>
+
+        <!-- Credit Hours -->
+        <div class="col-md-6">
+
+            <div class="summary-card">
+
+                <div class="summary-icon blue">
+                    <i class="bi bi-mortarboard"></i>
+                </div>
+
+                <p>Credit Hours Shown</p>
+
+                <h3 id="totalCredits">0</h3>
+
+                <small>
+                    Total credits of displayed courses
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- COURSE TABLE -->
+    <section class="content-card">
+
+        <div class="card-heading">
+
+            <div>
+                <h5>Course List</h5>
+
+                <p>
+                    Browse your academic courses
+                </p>
+            </div>
+
+            <i class="bi bi-journal-bookmark"></i>
+
+        </div>
+
+        <!-- SEARCH AND FILTER -->
+        <div class="row g-3 mb-4">
+
+            <!-- Search -->
+            <div class="col-lg-8">
+
+                <label for="courseSearch"
+                       class="form-label">
+                    Search Courses
+                </label>
+
+                <div class="input-group">
+
+                    <span class="input-group-text">
+                        <i class="bi bi-search"></i>
+                    </span>
+
+                    <input
+                        type="search"
+                        id="courseSearch"
+                        class="form-control"
+                        placeholder="Search code, name or lecturer">
+
+                </div>
+
+            </div>
+
+            <!-- Semester Filter -->
+            <div class="col-lg-4">
+
+                <label for="semesterFilter"
+                       class="form-label">
+                    Semester
+                </label>
+
+                <select id="semesterFilter"
+                        class="form-select">
+
+                    <option value="all">
+                        All Semesters
+                    </option>
+
+                    <option value="5">
+                        Semester 5
+                    </option>
+
+                    <option value="4">
+                        Semester 4
+                    </option>
+
+                </select>
+
+            </div>
+
+        </div>
+
+        <!-- RESPONSIVE TABLE -->
+        <div class="table-responsive">
+
+            <table class="table course-table align-middle">
+
+                <thead>
+                    <tr>
+                        <th scope="col">Course Code</th>
+                        <th scope="col">Course Name</th>
+                        <th scope="col">Lecturer</th>
+                        <th scope="col">Credit Hours</th>
+                        <th scope="col">Semester</th>
+                        <th scope="col">Status</th>
+                    </tr>
+                </thead>
+
+                <tbody id="courseTableBody">
+                    <!-- JavaScript inserts rows here -->
+                </tbody>
+
+            </table>
+
+        </div>
+
+        <!-- EMPTY STATE -->
+        <div id="noCourses"
+             class="empty-state d-none">
+
+            <i class="bi bi-search"></i>
+
+            <h6>No courses found</h6>
+
+            <p>
+                Try another keyword or semester.
+            </p>
+
+        </div>
+
+        <!-- TABLE FOOTER -->
+        <div class="course-table-footer">
+
+            <span id="courseCountText">
+                Showing 0 courses
+            </span>
+
+            <button id="resetFilters"
+                    type="button"
+                    class="btn btn-outline-secondary btn-sm">
+
+                <i class="bi bi-arrow-clockwise"></i>
+                Reset Filters
+
+            </button>
+
+        </div>
+
+    </section>
+
+           <!-- FOOTER -->
+        <footer class="dashboard-footer">
+            © 2026 University Tecnology Petron |
+            IMS566 Academic Project
+        </footer>
+
+    </main>
+
+</div> <!-- End main-wrapper -->
+
+<!-- Bootstrap JavaScript -->
+<script
+  src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js">
+</script>
+
+<!-- Courses JavaScript -->
+<script src="js/courses.js"></script>
+<script src="js/common.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+/* Attendance Tracker */
+
+.card {
+    border-radius: 12px;
+}
+
+.table th,
+.table td {
+    padding: 14px;
+}
+
+.btn,
+.form-control,
+.form-select {
+    border-radius: 8px;
+}
+
+#attendanceChart {
+    width: 100% !important;
+    height: auto !important;
+}

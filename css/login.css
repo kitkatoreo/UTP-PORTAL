@@ -1,0 +1,120 @@
+/* =================================
+   UTP STUDENT PORTAL
+   LOGIN & REGISTRATION STYLING
+================================= */
+
+/* Colour Variables */
+:root {
+    --primary: #102a43;
+    --secondary: #0d9488;
+    --background: #f5f8fc;
+}
+
+/* Page Background */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+
+    background: linear-gradient(
+        135deg,
+        #102a43,
+        #0d9488
+    );
+}
+
+/* Center Login Card */
+.auth-container {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px 15px;
+}
+
+/* Login / Registration Card */
+.auth-card {
+    background-color: white;
+    width: 100%;
+    max-width: 450px;
+
+    padding: 40px;
+    border-radius: 18px;
+
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+}
+
+/* University Logo */
+.logo-icon {
+    width: 65px;
+    height: 65px;
+
+    background-color: #e8f5f3;
+    color: var(--secondary);
+
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 32px;
+    margin: auto;
+}
+
+/* Headings */
+.auth-card h2,
+.auth-card h4 {
+    color: var(--primary);
+}
+
+/* Input Fields */
+.form-control {
+    padding: 12px;
+    border-radius: 8px;
+}
+
+.form-control:focus {
+    border-color: var(--secondary);
+    box-shadow: 0 0 0 0.2rem rgba(13,148,136,0.15);
+}
+
+/* Login and Register Button */
+.btn-auth {
+    background-color: var(--secondary);
+    color: white;
+
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+}
+
+.btn-auth:hover {
+    background-color: #0b766e;
+    color: white;
+}
+
+/* Links */
+.auth-card a {
+    color: var(--secondary);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.auth-card a:hover {
+    text-decoration: underline;
+}
+
+/* Mobile Layout */
+@media (max-width: 576px) {
+
+    .auth-card {
+        padding: 25px;
+    }
+
+    .auth-card h2 {
+        font-size: 26px;
+    }
+
+}

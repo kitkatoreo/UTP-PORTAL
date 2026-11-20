@@ -1,0 +1,119 @@
+/* ==========================================
+   UTP STUDENT PORTAL - ACADEMIC RESULTS
+========================================== */
+
+/* Semester Filter */
+#semesterFilter {
+    min-height: 46px;
+    border-color: #e2e8f0;
+    border-radius: 8px;
+}
+
+#semesterFilter:focus {
+    border-color: #0d9488;
+    box-shadow: 0 0 0 0.2rem rgba(13,148,136,0.15);
+}
+
+/* Results Table */
+.results-table {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+.results-table thead th {
+    background: #f1f5f9;
+    color: #475569;
+    font-weight: 600;
+    padding: 15px;
+    white-space: nowrap;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.results-table tbody td {
+    padding: 16px 15px;
+    border-bottom: 1px solid #e2e8f0;
+    color: #334155;
+}
+
+.results-table tbody tr:hover td {
+    background: #f8fafc;
+}
+
+.results-table tfoot th,
+.results-table tfoot td {
+    background: #f1f5f9;
+    font-weight: 700;
+    padding: 16px 15px;
+    color: #102a43;
+}
+
+/* Course Code */
+.result-code {
+    color: #0d9488;
+    font-weight: 700;
+}
+
+/* Subject Name */
+.result-name {
+    font-weight: 600;
+    color: #102a43;
+}
+
+/* Grade Badges */
+.grade-badge {
+    display: inline-block;
+    min-width: 42px;
+    padding: 6px 10px;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.grade-excellent {
+    background: #d1fae5;
+    color: #047857;
+}
+
+.grade-good {
+    background: #dbeafe;
+    color: #1d4ed8;
+}
+
+.grade-average {
+    background: #fef3c7;
+    color: #92400e;
+}
+
+.grade-low {
+    background: #fee2e2;
+    color: #b91c1c;
+}
+
+/* Chart */
+.results-chart-container {
+    position: relative;
+    width: 100%;
+    height: 330px;
+}
+
+/* Mobile */
+@media (max-width: 575.98px) {
+
+    .results-table {
+        font-size: 12px;
+    }
+
+    .results-table thead th,
+    .results-table tbody td,
+    .results-table tfoot td,
+    .results-table tfoot th {
+        padding: 12px;
+    }
+
+    .results-chart-container {
+        height: 260px;
+    }
+
+}
